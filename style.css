@@ -1,0 +1,107 @@
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif ;
+}
+li {
+	list-style: none; <!-- xoá dấu chấm mặc định phía trước Trang chủ, gth...
+}
+a {
+	text-decoration: none; <!-- xoá dấu chấm mặc định phía trước tìm kiếm, giỏ hàng...
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 12px 50px;
+	height: 70px;
+	align-items: center;
+}
+.logo {
+	flex: 1;
+}
+.menu {
+	flex: 3;
+	display: flex;
+}
+.menu > li {
+	padding: 30px 12px;
+	position: relative;
+}
+.sub-sanpham {
+	position: absolute;
+	width: 200px;
+	border: 1px solid #CCC;
+	padding: 30px 0 30px 20px;
+	display: none;
+	background-color: white;
+}
+.menu  li {
+ position: relative;
+}
+.sub-sanpham {
+	position: absolute;
+}
+.menu li:hover .sub-sanpham{
+	display: block;
+}
+
+.sub-tintuc {
+	position: absolute;
+	width: 200px;
+	border: 1px solid #CCC;
+	padding: 20px 0 20px 10px;
+	display: none;
+	background-color: white;
+
+}
+.menu li:hover .sub-tintuc{
+	display: block;
+}
+.menu > li a {
+	font-size: 13px;
+	font-weight: bold;
+	display: block;
+	line-height: 20px;
+	font-family: sans-serif;
+}
+.others {
+	flex: 1;
+	display: flex;
+}
+.others > li {
+	padding: 0 12px;
+}
+.others > li: first-child {
+	position: relative;
+}
+.others > li: first-child input {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #333;
+}
+.others > li: first-child i {
+	position: absolute;
+	right: 5px;
+}
+.others {
+	width: 100px;
+}
+.right: {
+	width: 50px;
+	float: left;
+}
+.left: {
+	width: 50px;
+	float: right;
+}	
+.left1{
+	width: 20px;
+	float: right;
+	margin: 7px;
+}
+.left2{
+	width: 20px;
+	float: left;
+	margin: 7px;
+}

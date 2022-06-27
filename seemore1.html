@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sản phẩm</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+<body>
+
+
+<!-- đầu -->
+<style>
+*{
+	margin: 0px;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif ;
+	text-decoration: none;
+
+/*fb, ist,email*/
+}
+.left{
+	width: 10px;
+	float: left;
+	display: flex;
+	flex: 1;
+}	
+.left1{
+	width: 10px;
+	float: left;
+	margin: 10px;
+}
+.left2{
+	width: 15px;
+	float: left;
+	margin: 10px;
+}
+.left3{
+	width: 10px;
+	float: left;
+	margin: 10px;
+}
+.menu{
+	flex: 1;
+}
+
+/*icon*/
+
+.nav-top_icon{
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+
+}
+.nav-top_icon .col-3{
+    position: relative;
+}
+.nav-top_icon .col-3:not(:last-child)::after{
+    display: block;
+    content: '';
+    height: 30%;
+    width: 1px;
+    background-color: #111;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0px,-50%);
+}
+.nav-top_icon .col-3 span{
+    position: absolute;
+    color: #111;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    line-height: 10px;
+    font-size: 9px;
+    background-color: #d6af55;
+    text-align: center;
+    top: 18%;
+    right: 15%;
+    transform: translate(-15%,-25%);
+    font-weight: bolder;
+}
+.nav-top_icon .col-3 > i{
+    color: #111;
+    font-size: 18px;
+    padding: 10px 1rem;
+}
+.nav-top_icon .col-3 > i:hover{
+    color: #d6af55;
+    transition: 0.4s;
+}
+.nav-top_icon .col-3 form{
+    position: absolute;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    top: 100%;
+    right: -30%;
+    visibility: hidden;
+}
+.nav-top_icon .col-3 form i{
+    color: #333;
+    margin: 5px 10px;
+}
+.nav-top_icon .col-3 form input{
+    flex: 1;
+    padding: 15px 0;
+    padding-right: 5px;
+    font-size: 13px;
+    background-color: transparent;
+    border: none;
+}
+.nav-top_icon .col-3 .login{
+    position: absolute;
+    width: 150px;
+    background-color: #fff;
+    padding: 5px 0;
+    border-radius: 5px;
+    right: -30%;
+    visibility: hidden;
+    top: 100%;
+}
+.nav-top_icon .col-3 .login a{
+    display: block;
+    margin: 5px 10px;
+    color: #333;
+    font-size: 14px;
+}
+.nav-top_icon .col-3 .login a:hover{
+    color: #d6af55;
+    transition: 0.4s;
+}
+
+
+ul.bieutuong {
+  list-style-type: none;
+  margin: 0;
+  padding: 1px;
+  overflow: hidden;
+  background-color: #FCDAD5;
+  
+}
+.menu1 {
+	flex: 1;
+	overflow: hidden;
+	background-color: white;
+
+}
+.menu1 a {
+	float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 50px;
+  text-decoration: none;
+  position: relative;
+
+}
+
+/* Thay đổi màu liên kết khi di chuột qua */
+.menu1 a:hover {
+  background-color: pink;
+  color: white;
+  font-weight: bold
+}
+
+.menu1 a{
+	font-size: 18px;
+	display: block;
+	line-height: 20px;
+	font-family: sans-serif;
+	border: none;
+}
+
+/* Tạo ba cột không bằng nhau, float cạnh nhau */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Cột bên trái và phải */
+.column.side {
+  width: 20%;
+  padding: 0;
+  padding-left: 20px;
+}
+
+/* Cột chính giữa */
+.column.middle {
+  width: 70%;
+  padding: 30px;
+
+}
+
+/* Clear float khác sau các cột */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Bố cục linh hoạt: ba cột xếp chồng lên nhau thay vì cạnh nhau khi màn hình 
+có chiều rộng dưới 600px */
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+  width: 100%;
+  }
+</style>
+
+	<ul class="bieutuong">	
+		<div class="left" >
+			<div class="left1"><a href="https://www.facebook.com/" target="_blank"><img src="./fb.png" alt="" style="height: 18px" width="18px"></a></div>
+			<div class="left2"><a href="https://www.instagram.com/" target="_blank"><img src="./isg.png" alt="" style="height: 18px" width="18px"></a></div>
+			<div class="left3"><a href="https://www.email.com/" target="_blank"><img src="./email.png" alt="" style="height: 18px" width="18px"></a></div>
+		</div>
+	
+		<div class="menu"></div>
+	
+		<div class="nav-top_icon row">
+                    <div class="col-3">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <form action="">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <input type="search" placeholder="Tìm kiếm ...">
+                        </form>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <span cart-no>0</span>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <div class="login">
+                            <a href="">Đăng nhập</a>
+                            <a href="">Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+
+	</ul>
+		<!-- <div class="logo">
+			<div class="logo1">
+				<center><img src="./logo2.png" alt="" height="80px" width="1300px"></center>
+			</div>
+		</div> -->
+		<div class="row">
+			<div class="column side">
+				<img src="./logonen.png" alt="" height="90px" width="200px">
+			</div>
+			<div 
+			class="column middle">
+				<div class="menu1">
+					<a href="perfume2.html"> TRANG CHỦ </a>
+					<a href="gioithieu2.html"> GIỚI THIỆU </a>
+					<a href="sanpham.html"> SẢN PHẨM </a> 
+					<a href=""> TIN TỨC </a>
+					<a href="lienhe.html"> LIÊN HỆ </a>
+				
+				</div>
+			</div>
+
+
+<!-- thân -->
+<style>
+.menu2 {
+	flex: 1;
+	overflow: hidden;
+	background-color: white;
+
+}
+.menu2 a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 50px;
+  text-decoration: none;
+  position: relative;
+
+}
+.menu2 a{
+	font-size: 18px;
+	display: block;
+	line-height: 20px;
+	font-family: monospace;
+	border: none;
+}
+
+/* Tạo ba cột không bằng nhau, float cạnh nhau */
+.column2 {
+  float: left;
+  padding: 10px;
+}
+/* Thay đổi màu liên kết khi di chuột qua */
+.menu2 a:hover {
+  background-color: #F5F5F5;
+  color: #8B7355;
+  font-family: monospace;
+}
+
+/* Cột bên trái và phải */
+.columnside2 {
+  width: 20%;
+  padding: 0;
+  padding-left: 20px;
+}
+
+/* Cột chính giữa */
+.column.middle2 {
+  width: 80%;
+  padding: 30px;
+
+}
+
+/* Clear float khác sau các cột */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Bố cục linh hoạt: ba cột xếp chồng lên nhau thay vì cạnh nhau khi màn hình 
+có chiều rộng dưới 600px */
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+  width: 100%;
+  }
+</style>
+
+
+
+	<div class="trang1"><center><img src="./sanphamtrang1.png" width="1520px "></center></div>
+
+	<div class="row2">
+			<div class="column side2">
+				<img src="./1.1.png" alt="" height="90px" width="200px">
+			</div>
+			<div 
+			class="column middle2">
+				<div class="menu2">
+					<a href="seemore1.html"> TẤT CẢ </a>
+					<a href="nuochoanam.html"> NƯỚC HOA NAM </a>
+					<a href="nuochoanu.html"> NƯỚC HOA NỮ </a>
+					<a href="nuochoaunisex.html"> NƯỚC HOA UNISEX </a> 
+					<a href="bestseller.html"> BEST SELLER </a>
+				
+				</div>
+			</div>
+			<div class="column side2"></div>
+		</div>
+
+
+<!-- sản phẩm -->
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+     body{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        color: #111;
+        line-height: 1.15;
+    }
+    #best{
+        max-width: 1170px;
+        margin: 0 auto;
+
+     }
+    .thebest{
+    	text-align: center;
+    }
+	h1{
+		color: #111;
+		padding: 10px 20px;
+		text-transform: uppercase;
+		border: 1px solid #bebebe;
+		display: inline-block;
+	}
+	 ul.products{
+    	list-style: none;
+    	display: flex;
+    	flex-wrap: wrap;
+    	justify-content: space-between;
+    }
+    ul.products li{
+    	flex-basis: 25%;
+    	padding-left: 15px;
+    	padding-right: 15px;
+    	box-sizing: border-box;
+    	margin-bottom: 30px;
+    }
+    ul.products li img{
+
+    	height: auto;
+    	max-width: 100%;
+   }
+    ul.products li .product-top{
+    	position: relative;
+    	overflow: hidden;
+    }
+    ul.products li .product-top .product-thumb{
+     	display: block;
+     }
+    ul.products li .product-top .product-thumb img{
+    	display: block;
+    }
+    ul.products li:hover .product-top .product-thumb img{
+    	filter: opacity(80%);
+    }
+    ul.products li .product-top a.buy-now{
+    	text-transform: uppercase;
+    	text-decoration: none;
+    	text-align: center;
+    	display: block;
+    	background-color: pink;
+    	color: #fff;
+    	padding: 10px 0px;
+    	position: absolute;
+    	bottom: -41px;
+    	width: 100%;
+    	transition: 0.25s ease-in-out;
+    	opacity: 0.85;
+    }
+    ul.products li:hover a.buy-now{
+    	bottom: 0px;
+    }
+    ul.products li .product-info{
+    	padding: 10px 0px;
+    }
+    ul.products li .product-info a{
+    	display: block;
+    	text-decoration: none;
+    }
+    ul.products li .product-info a.product-cat{
+    	font-size: 11px;
+    	text-transform: uppercase;
+    	color: #9e9e9e;
+    	padding: 3px 0px;
+    }
+    ul.products li .product-info a.product-name{
+    	color: #334826;
+    	padding: 3px 0px;
+    }
+    ul.products li .product-info a.product-price{
+    	color: #111;
+    	padding: 2px 0px;
+    	font-weight: 600px;
+</style>
+
+
+<div id ="best">
+<ul class="products">
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./nu.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa nữ </a>
+							<a href="" class="product-name"> Chanel Coco Mademoiselle L'Eau Privée EDP 100ml</a>
+							<div class="product-price"> 3.380.000đ </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./nam1.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa nam </a>
+							<a href="" class="product-name"> Chanel Bleu EDP, 100ml</a>
+							<div class="product-price"> 3.340.000đ </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./unisex.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa unisex</a>
+							<a href="" class="product-name"> Le Labo Santal 33 100ml</a>
+							<div class="product-price"> 5.250.000đ </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./nu1.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa nữ </a>
+							<a href="" class="product-name">Lancôme La Vie Est Belle EDP 100ml</a>
+							<div class="product-price"> 2.780.000đ </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./nam 2.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa nam </a>
+							<a href="" class="product-name"> Nước Hoa Dolce & Gabbana The One Gold Intense For Men EDP 100ml</a>
+							<div class="product-price"> 2.050.000đ </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./nam 3.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa nam </a>
+							<a href="" class="product-name">  Dior Sauvage Parfum 200ml</a>
+							<div class="product-price"> 4.050.000đ </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./nu 2.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa nữ </a>
+							<a href="" class="product-name">  Gucci Guilty Pour Femme EDT 90ml</a>
+							<div class="product-price"> 2.080.000đ </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./nu 3.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa nữ </a>
+							<a href="" class="product-name"> Carolina Herrera Good Girl Supreme EDP 80ml</a>
+							<div class="product-price"> 2.580.000đ </div>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./gt1.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa nữ </a>
+							<a href="" class="product-name"> Enternity 100ml</a>
+							<div class="product-price"> 1.258.000đ </div>
+						</div>
+					</div>
+				</li>
+
+
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./unisex3.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa unisex </a>
+							<a href="" class="product-name"> Tom Ford Ombre Leather</a>
+							<div class="product-price"> 5.533.000 </div>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./nu 4.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa nữ </a>
+							<a href="" class="product-name"> White Diamonds 100ml</a>
+							<div class="product-price"> 638.180.000đ </div>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./unisex1.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa unisex </a>
+							<a href="" class="product-name"> CK One</a>
+							<div class="product-price"> 886.497.000đ </div>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./nu 6.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa nữ </a>
+							<a href="" class="product-name">The One by Dolce & Gabbana</a>
+							<div class="product-price"> 675.349.000đ </div>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./nam 4.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa nam </a>
+							<a href="" class="product-name"> Versace Eros</a>
+							<div class="product-price"> 1.779.000đ </div>
+						</div>
+					</div>
+				</li>
+
+
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./nu 7.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa nữ </a>
+							<a href="" class="product-name"> English Lavender 125ml</a>
+							<div class="product-price"> 1.158.180.000đ </div>
+						</div>
+					</div>
+				</li>
+
+
+
+
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./nu 8.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa nữ </a>
+							<a href="" class="product-name">Samsara 100ml</a>
+							<div class="product-price"> 1.266.000đ </div>
+						</div>
+					</div>
+				</li>
+
+				
+
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./nam 5.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa nam </a>
+							<a href="" class="product-name"> Chrome</a>
+							<div class="product-price"> 3.568.000đ </div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./nam 6.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa nam</a>
+							<a href="" class="product-name"> Versace Pour Homme</a>
+							<div class="product-price"> 1.708.000đ </div>
+						</div>
+					</div>
+				</li>
+
+				
+
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./unisex2.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa unisex </a>
+							<a href="" class="product-name"> CK Be</a>
+							<div class="product-price"> 3.358.000đ </div>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./unisex4.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa unisex </a>
+							<a href="" class="product-name"> Kirke perfume</a>
+							<div class="product-price"> 3.588.000đ </div>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./unisex5.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa unisex </a>
+							<a href="" class="product-name"> Al Haramain Amber Oud Perfume</a>
+							<div class="product-price"> 3.538.000đ </div>
+						</div>
+					</div>
+				</li>
+
+
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./nam 7.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa nam </a>
+							<a href="" class="product-name"> Jean Paul Gaultier Cologne</a>
+							<div class="product-price"> 2.163.000đ </div>
+						</div>
+					</div>
+				</li>
+
+
+				<li>
+					<div class="product-item">
+						<div class="product-top">
+							<a href="" class="product-thumb">
+								<img src="./unisex6.png" alt="">
+							</a>
+							<a href=" " class="buy-now">Mua ngay</a>
+						</div>
+						<div class="product-info">
+							<a href="" class="product-cat"> Nước hoa unisex </a>
+							<a href="" class="product-name"> Replica By The Fireplace Perfume</a>
+							<div class="product-price"> 3.377..000đ </div>
+						</div>
+					</div>
+				</li>
+
+
+
+			</ul>
+		</div>
+	</div>
+
+
+
+<!-- chân trang -->
+<style>
+body{
+	line-height: 1.5;
+	font-family: 'poppins', sans-serif;
+
+}
+*{
+	margin: 0px;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+.search-box{
+	position: absolute;
+	/*top: 10%;*/
+	left: 50%;
+	transform: translate(-50%, 50%);
+	height: 40px;
+	border-radius: 40px;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+ul{
+    list-style: none;
+}
+.footer {
+   background-image: url(https://img.freepik.com/free-photo/beige-earth-tone-design-space-background_53876-102507.jpg?w=2000);
+    padding: 30px 0;
+    height: 350px;
+
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.row1 {
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer-col h3{
+	font-size: 20px;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 700;
+	position: relative;
+
+}
+.footer-col h3: : before{
+	content: '';
+	position: absolute;
+	left: 0;
+	border: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	/*box-sizing: border-box;*/
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	 text-decoration: none;
+	 font-weight: 300;
+	 color: black;
+	 display: block;
+	 transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #FF6666;
+	padding-left: 10px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255, 255, 255, 0.2);
+	margin-right: 0 10px 0;
+	text-align: center;
+	line-height: 40px;
+	 border-radius: 50%;
+	 color: black;
+	 transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	 color: #24262b;
+	 background-color: #ffffff;
+}
+/*respnsive*/
+@media(max-width:  767px){
+	.footer-col{
+		width: 50%;
+		margin-bottom: 30px;
+}
+}
+@media(max-width:  574px){
+	.footer-col{
+		width: 100%;
+}
+
+</style>
+
+
+	
+    <footer class="footer">
+    	<center><img src="./logo2.png" width="1300px"></center>
+    <div class="container">
+        <div class="row1">
+            <div class="footer-col">
+                <h3>Danh mục</h3>
+                <ul>
+                    <li><a href="perfume2.html"> Trang chủ</a></li>
+                    <li><a href="gioithieu2.html"> Giới thiệu</a></li>
+                    <li><a href="sanpham.html"> Sản phẩm</a></li>
+                    <li><a href="#"> Tin tức</a></li>
+                    <li><a href="lienhe.html"> Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Hỗ trợ</h3>
+                <ul>
+                    <li><a href="#">FAQs - Hỏi đáp</a></li>
+                    <li><a href="#">Chính sách vận chuyển</a></li>
+                    <li><a href="#">Hướng dẫn thanh toán</a></li>
+                    <li><a href="#">Kiểm tra đơn hàng</a></li>
+                    <li><a href="#">Kiểm tra đơn hàng</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Về chúng tôi</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> &nbsp; Mỹ An, Ngũ Hành Sơn, Đà Nẵng</li>
+                    <li><i class="fa-solid fa-phone"></i> &nbsp; 0987645244 </li>
+                    <li><i class="fa-regular fa-envelope"></i> &nbsp; myperfume1@gmail.com</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Kết nối với chúng tôi</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.email.com/"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</footer>
+</body>
+</html>
